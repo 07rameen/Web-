@@ -12,6 +12,24 @@
 	background-color: dimgrey;
 	align-content: center;
 }
+    
+	 .container1
+	 {
+		 
+		 background-color: cadetblue;
+		 align-items: center;
+		 border-radius: 1.25in; 
+		background-size: 6in;
+		background-origin: padding-box; 
+	 }
+	 .anotherdiv
+	 {
+		display: flex;
+		 align-items: left;
+		 justify-content: left;
+		 background-origin: padding-box; 
+	 }
+
 
 </style>
 <html lang="en">
@@ -19,45 +37,54 @@
 	<meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Login</title>
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<title>Create A New Account</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		
 	</head>
+
 	<body>
-		
-		<h1 align="center">Login</h1>
-		
-		<section class="vh-100">
-			<div class="container py-5 h-100">
-			  <div class="row d-flex align-items-center justify-content-center h-100">
-				<div class="col-md-8 col-lg-7 col-xl-6">
-				  <img src="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-login-form/draw2.svg" class="img-fluid" alt="Phone image" width="700">
-				</div>
-				<div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-
-					<form id="reg-form" align="right">
-			<div class="form-outline mb-4">
-			<!--	<input type="email" id="form1Example13" class="form-control form-control-lg" />
-			-->
-			<label class="form-label" for="form1Example13">Username</label>
-			<input type="text" autocomplete="off" id="username" placeholder="Username" class="form-control" class="form-control-lg" />
+<br>
+		<div class="container1" align="center">
 			<br>
-			  </div>
+			<h1><strong style="color: floralwhite;">Create A New Account</strong></h1>
+			<br>
+			<br>
+			<br>
 
-			  <div class="form-outline mb-4">
-			<!--	<input type="password" id="form1Example23" class="form-control form-control-lg" />
-			-->
-			<label class="form-label" for="form1Example23">Password</label>
-			
-				<input type="password" autocomplete="off" id="password" placeholder="Password" class="form-control" class="form-control-lg" />
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+			<img style='float:left;width:500px;height:400px;'src="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-login-form/draw2.svg" class="img-fluid" alt="Phone image" width="700">
+	
+             <form id="reg-form" style='float: right;' class="col-md-6 mx-auto mt-8 p-6 " style="box-shadow: 0px 0px 12px black; background-color: burlywood; align-items: left";>		
 				<br>
-		
-			  </div>
+				<br>
+				<br>
+				<div class="col-md-10 mx-auto mt-9 p-9 " style="display:block ; box-shadow: 0px 0px 12px black; background-color: burlywood; align-items: left";>		
+			<br>
+
+				<label class="form-label" for="form1Example13">Enter Username</label>
 			
-		
-		<!--<input type="submit" value="Submit Form" class="btn btn-primary"/> -->
+
+				<input type="text" autocomplete="off" id="username" placeholder="Username" class="form-control" class="form-control-lg" />
+				<br>
+				<label class="form-label" for="form1Example23">Enter Password</label>
+				
+					<input type="password" autocomplete="off" id="password" placeholder="********" class="form-control" class="form-control-lg" />
+					<br>
+			
 			<button type="submit" class="btn btn-primary" value="Submit Form">Sign in</button>
-			
-		</form>
+		<br>
+			<br>
+			</div>
+
+			 </form>
+		</div>
+    </div>
 	
 		<script>
 			const form = document.getElementById('reg-form')
@@ -92,3 +119,4 @@
 		<script src="js/bootstrap.min.js"></script>
 	</body>
 </html>
+

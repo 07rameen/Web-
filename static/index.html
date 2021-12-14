@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<style>
+	.divider:after,
+.divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+}
+.example
+{
+	background-color: dimgrey;
+	align-content: center;
+}
+    
+	 .container1
+	 {
+		 
+		 background-color: cadetblue;
+		 align-items: center;
+		 border-radius: 1.25in; 
+		background-size: 6in;
+		background-origin: padding-box; 
+	 }
+	 .anotherdiv
+	 {
+		display: flex;
+		 align-items: left;
+		 justify-content: left;
+		 background-origin: padding-box; 
+	 }
+
+
+</style>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Create A New Account</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		
+	</head>
+
+	<body>
+<br>
+		<div class="container1" align="center">
+			<br>
+			<h1><strong style="color: floralwhite;">Create A New Account</strong></h1>
+			<br>
+			<br>
+			<br>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+			<img style='float:left;width:500px;height:400px;'src="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-login-form/draw2.svg" class="img-fluid" alt="Phone image" width="700">
+	
+             <form id="reg-form" style='float: right;' class="col-md-6 mx-auto mt-8 p-6 " style="box-shadow: 0px 0px 12px black; background-color: burlywood; align-items: left";>		
+				<br>
+				<br>
+				<br>
+				<div class="col-md-10 mx-auto mt-9 p-9 " style="display:block ; box-shadow: 0px 0px 12px black; background-color: burlywood; align-items: left";>		
+			<br>
+
+				<label class="form-label" for="form1Example13">Enter Username</label>
+			
+
+				<input type="text" autocomplete="off" id="username" placeholder="Username" class="form-control" class="form-control-lg" />
+				<br>
+				<label class="form-label" for="form1Example23">Enter Password</label>
+				
+					<input type="password" autocomplete="off" id="password" placeholder="********" class="form-control" class="form-control-lg" />
+					<br>
+			
+			<button type="submit" class="btn btn-primary" value="Submit Form">Sign in</button>
+		<br>
+			<br>
+			</div>
+
+			 </form>
+		</div>
+    </div>
+	
+		<script>
+			const form = document.getElementById('reg-form')
+			form.addEventListener('submit', registerUser)
+
+			async function registerUser(event) {
+				event.preventDefault()
+				const username = document.getElementById('username').value
+				const password = document.getElementById('password').value
+
+				const result = await fetch('/api/register', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json'
+					},
+					body: JSON.stringify({
+						username,
+						password
+					})
+				}).then((res) => res.json())
+
+				if (result.status === 'ok') {
+					// everythign went fine
+					alert('Success')
+				} else {
+					alert(result.error)
+				}
+			}
+		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
+
